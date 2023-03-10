@@ -1,0 +1,111 @@
+
+header,
+.fa {
+  color: var(--header-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--header-background);
+  height: var(--header-height);
+
+  .left {
+    display: inherit;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+
+    a {
+      color: var(--header-color);
+      white-space: nowrap;
+      font-size: .9em;
+
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--header-background);
+  width: var(--sidenav-width);
+  height: 100%;
+}
+
+app-toggle-theme {
+  margin-right: 5px;
+}
+
+.menu-animation {
+  margin: 2px 20px;
+  width: 20px;
+  background-color: transparent;
+}
+
+.menu-animation>span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 8px;
+  background-color: var(--header-color);
+}
+
+.menu-animation>span:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.menu-animation,
+.menu-animation>span {
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-animation.active>span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-animation.active>span:nth-child(1),
+.menu-animation.active>span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.menu-animation.active>span:nth-child(1) {
+  transform: translateY(6px);
+}
+
+.menu-animation.active>span:nth-child(3) {
+  transform: translateY(-6px) rotate(-90deg);
+}
+
+.menu-animation.active {
+  transition-delay: 0.2s;
+  transform: rotate(-225deg);
+}
+
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 12px;
+  border: 1px solid #555;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

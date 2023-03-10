@@ -1,0 +1,25 @@
+@import "assets/styles/variables.scss";
+@import "assets/styles/theme.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Montserrat", sans-serif;
+  position: relative;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-size: 0.9em;
+  background: var(--body-background);
+  color: var(--text-color);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
